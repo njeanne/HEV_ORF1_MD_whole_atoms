@@ -1,0 +1,18 @@
+Molecular Dynamic configuration file for 30 millions of cycles
+
+&cntrl
+  imin=0,           ! molecular dynamics
+  irest=1,          ! not a restart
+  ntx=5,            ! reads coordinates and velocity
+  nstlim=30000000,  ! 30 millions cycles
+  dt=0.002,         ! each cycle is 0.002 picosecond. Unit of fs (This is default)
+  ntc=2,            ! SHAKE algorithm for hydrogen bonds
+  ntpr=2000,        ! write outputs file every 2000 cycles
+  ntwx=2000,        ! write trajectory file every 2000 cycles
+  cut=1000,         ! used to specify the nonbonded cutoff, in Angstrom. MUST BE SET TO 1000 TO USE PMEMD WITH GPUs
+  igb=1,            ! Flag for using the generalized Born or Poisson-Boltzmann implicit solvent models
+  ntb=0,            ! no periodicity is applied and PME is off (default when igb > 0)
+  ntt=3,            ! temperature control with Langevin dynamics
+  gamma_ln=1.0,     ! collision frequency of 1 ps-1
+  temp0=300.0       ! target temperature 300°K
+&ewald skinnb=5.0d0

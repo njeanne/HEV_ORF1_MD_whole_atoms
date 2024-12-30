@@ -1,0 +1,18 @@
+Heating configuration
+
+&cntrl             ! start you command list
+  imin=0,           ! molecular dynamics
+  irest=0,          ! not a restart
+  nstlim=100000,    ! 100 000 cycles
+  dt=0.002,         ! each cycle is 0.002 picosecond
+  ntc=2,            ! SHAKE algorithm for hydrogen bonds
+  ntpr=500,         ! write outputs file every 500 cycles
+  ntwx=500,         ! write trajectory file every 500 cycles
+  cut=12,           ! used to specify the nonbonded cutoff, in Angstrom
+  ntb=0,            ! no periodicity is applied and PME is off (default when igb > 0)
+  igb=1,            ! Flag for using the generalized Born or Poisson-Boltzmann implicit solvent models
+  ntt=3,            ! temperature control with Langevin dynamics
+  gamma_ln=1.0,     ! collision frequency of 1 ps-1
+  tempi=0.0,        ! starting temperature 0°K
+  temp0=300.0,      ! target temperature 300°K
+&end               ! end you command list

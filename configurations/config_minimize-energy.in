@@ -1,0 +1,10 @@
+Energy Minimisation configuration for SANDER
+
+&cntrl             ! start you command list
+  imin=1,           ! energy minimization
+  maxcyc=200,       ! total of 200 minimization steps
+  ncyc=50,          ! 50 steps of steepest descent before conjugate gradient
+  cut=12,           ! cut off of 16 Angstroms for electrostatics
+  ntb=0,            ! no periodicity
+  igb=1,            ! use the GB model
+&end               ! end you command list
